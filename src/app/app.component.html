@@ -1,0 +1,25 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-2">
+             <table class="table table-borderd">
+               <thead>
+                   <tr>
+                      <th>sr</th>
+                      <th>Name</th>
+                      <th>count</th>
+                   </tr>
+               </thead>
+               <tbody>
+                    <tr *ngFor="let user of usersArray; let i = index"
+                      [ngStyle]="{'background':colors(user.count!)}"
+                    >
+                        <td><strong>{{i + 1}}</strong></td>
+                        <td>{{user.name}}</td>
+                        <td>{{user.count}}</td>
+                    </tr>
+               </tbody>
+             </table>
+        </div>
+    </div>
+</div>
